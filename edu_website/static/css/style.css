@@ -1,0 +1,94 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables for Color Scheme */
+:root {
+    --white: #FFFFFF;
+    --gray: #BFBFBF;
+    --navy: #2C2C54;
+}
+
+/* Body and General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: var(--gray);
+    color: var(--navy);
+    line-height: 1.6;
+}
+/*background image set-up*/
+body {
+    background-image: url("../images/background.jpg");
+    background-size: cover; /* Ensure the image covers the entire page */
+    background-repeat: no-repeat; /* Avoid repeating the image */
+    background-attachment: fixed; /* Keep the background fixed during scrolling */
+    background-position: center; /* Center the image */
+    color: #2C2C54; /* Adjust text color for better visibility */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--navy);
+    color: var(--white);
+    padding: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--white);
+    margin-left: 1rem;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    background: var(--white);
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: var(--navy);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--navy);
+    color: var(--white);
+}

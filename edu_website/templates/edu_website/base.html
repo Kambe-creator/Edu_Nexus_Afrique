@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}EduNexus Afrique{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script defer src="{% static 'js/script.js' %}"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">EduNexus Afrique</div>
+        <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="{% url 'edu_website:home' %}">Home</a></li>
+            <li><a href="{% url 'edu_website:blog_list' %}">Blog</a></li>
+            <li><a href="{% url 'edu_website:testimonials' %}">Testimonials</a></li>
+            <li><a href="{% url 'edu_website:contact_us' %}">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Dynamic Content -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 EduNexus Afrique. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

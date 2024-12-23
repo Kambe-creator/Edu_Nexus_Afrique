@@ -1,6 +1,10 @@
-<h1>Blog</h1>
-<ul>
-    {% for post in posts %}
-        <li><a href="{% url 'blog_detail' post.pk %}">{{ post.title }}</a></li>
-    {% endfor %}
-</ul>
+{% extends 'edu_website/base.html' %}
+{% block title %}Blog | EduNexus Afrique{% endblock %}
+{% block content %}
+    <h1>Blog</h1>
+    <ul>
+        {% for post in posts %}
+            <li><a href="{% url 'blog_detail' post.pk %}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

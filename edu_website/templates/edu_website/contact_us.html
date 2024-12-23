@@ -1,6 +1,11 @@
 <h1>Contact Us</h1>
+<p>Have questions? Fill out the form below, and we'll get back to you!</p>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Send</button>
 </form>
+
+{% if form.errors %}
+    <p style="color: red;">Please correct the errors below and resubmit the form.</p>
+{% endif %}

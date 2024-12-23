@@ -1,0 +1,12 @@
+{% extends 'edu_website/base.html' %}
+
+{% block content %}
+<h1>Testimonials</h1>
+<ul>
+    {% for testimonial in testimonials %}
+        <li>{{ testimonial.content }} - <strong>{{ testimonial.author }}</strong></li>
+    {% empty %}
+        <li>No testimonials available.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
