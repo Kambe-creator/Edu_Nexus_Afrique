@@ -1,0 +1,34 @@
+{% extends 'edu_website/base.html' %}
+{% block title %}iSustainme | EduNexus Afrique{% endblock %}
+{% block content %}
+<section class="feature-page">
+    <h1>iSustainme: Educator Wellness</h1>
+    <p>
+        At <strong>iSustainme</strong>, we believe that educators must prioritize their well-being to better support their students and communities. 
+        This section offers tools, resources, and strategies for self-care and professional growth.
+    </p>
+    
+    <div class="feature-details">
+        <h2>Why Educator Wellness Matters</h2>
+        <p>
+            Teaching is a demanding profession that requires immense dedication. However, educators often neglect their own needs 
+            in their pursuit to nurture others. <strong>iSustainme</strong> provides a framework for self-care that ensures educators 
+            maintain balance, resilience, and sustained motivation.
+        </p>
+        
+        <h2>What iSustainme Offers</h2>
+        <ul class="offerings">
+            <li><strong>Self-Care Toolkit:</strong> A collection of actionable steps for stress management and well-being.</li>
+            <li><strong>Task Planner:</strong> Tools for organizing personal and professional responsibilities effectively.</li>
+            <li><strong>Vision Board:</strong> Help educators set and track meaningful goals.</li>
+            <li><strong>Budget and Meal Planner:</strong> Maintain physical and financial health effortlessly.</li>
+            <li><strong>Student Tracking Tools:</strong> Manage and monitor student progress with ease.</li>
+        </ul>
+        
+        <h2>Get Started</h2>
+        <p>
+            Ready to take control of your wellness journey? <a href="{% url 'edu_website:contact_us' %}">Contact us</a> to learn more about how iSustainme can empower you.
+        </p>
+    </div>
+</section>
+{% endblock %}

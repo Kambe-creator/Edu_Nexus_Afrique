@@ -1,11 +1,27 @@
-<h1>Contact Us</h1>
-<p>Have questions? Fill out the form below, and we'll get back to you!</p>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Send</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="contact-page">
+    <div class="contact-container">
+        <div class="form-overlay">
+            <h1>Contact Us</h1>
+            <p>Have questions? Fill out the form below, and we'll get back to you!</p>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="submit-btn">Send</button>
+            </form>
 
-{% if form.errors %}
-    <p style="color: red;">Please correct the errors below and resubmit the form.</p>
-{% endif %}
+            {% if form.errors %}
+                <p class="error-message">Please correct the errors below and resubmit the form.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

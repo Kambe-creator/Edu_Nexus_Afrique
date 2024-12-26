@@ -1,8 +1,159 @@
 {% extends 'edu_website/base.html' %}
+{% load static %}
 {% block title %}Home | EduNexus Afrique{% endblock %}
+
 {% block content %}
-    <section class="hero">
-        <h1>Welcome to EduNexus Afrique</h1>
-        <p>Innovation for humanity.</p>
-    </section>
+<section class="hero">
+    <h1>Welcome to EduNexus Afrique</h1>
+    <p>Innovation for humanity.</p>
+</section>
+
+<!-- Main Section -->
+<section class="main-container">
+    <!-- Edu-Konnect -->
+    <div class="section-item" id="edu-konnect">
+        <h2>Edu-Konnect</h2>
+        <p>Empowering communities through technology, education, and connection.</p>
+        <button class="toggle-btn" onclick="toggleSubsections('edu-subsections')">View Details</button>
+        <div class="subsections hidden" id="edu-subsections">
+            <div class="grid-item">
+                <img src="{% static 'images/neuroaid.png' %}" alt="NeuroAid AI Icon">
+                <h3>NeuroAid AI</h3>
+                <p>AI-powered solutions for learning disabilities.</p>
+            </div>
+            <div class="grid-item">
+                <img src="{% static 'images/isustainme.png' %}" alt="iSustainme Icon">
+                <h3>iSustainme</h3>
+                <p>Sustainability through resource upcycling and innovations.</p>
+            </div>
+            <div class="grid-item">
+                <img src="{% static 'images/french-konnect.png' %}" alt="French Konnect Icon">
+                <h3>French Konnect</h3>
+                <p>Connecting through language and cultural exchange.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mtaa Legit -->
+    <div class="section-item" id="mtaa-legit">
+        <h2>Mtaa Legit</h2>
+        <p>Building grassroots resilience and innovation in communities.</p>
+        <button class="toggle-btn" onclick="toggleSubsections('mtaa-subsections')">View Details</button>
+        <div class="subsections hidden" id="mtaa-subsections">
+            <div class="grid-item">
+                <img src="{% static 'images/miradi.png' %}" alt="Miradi Icon">
+                <h3>Miradi</h3>
+                <p>Community-led projects for local development.</p>
+            </div>
+            <div class="grid-item">
+                <img src="{% static 'images/anga.png' %}" alt="Anga Weather Icon">
+                <h3>Anga</h3>
+                <p>Real-time weather updates to mitigate risks.</p>
+            </div>
+            <div class="grid-item">
+                <img src="{% static 'images/environmental-resilience.png' %}" alt="Environmental Resilience Icon">
+                <h3>Environmental Resilience</h3>
+                <p>Innovations for sustainable community ecosystems.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Main Section -->
+<section class="main-container">
+    <!-- Edu-Konnect -->
+    <div class="section-item">
+        <h2>Edu-Konnect</h2>
+        <p>Empowering communities through technology, education, and connection.</p>
+        <button class="toggle-btn" onclick="toggleSubsections('edu-subsections')">View Details</button>
+        <div class="subsections hidden" id="edu-subsections">
+            <div class="grid-item">
+                <a href="{% url 'edu_website:neuroaid' %}">
+                    <img src="{% static 'images/neuroaid.png' %}" alt="NeuroAid AI Icon">
+                    <h3>NeuroAid AI</h3>
+                    <p>AI-powered solutions for learning disabilities.</p>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="{% url 'edu_website:isustainme' %}">
+                    <img src="{% static 'images/isustainme.png' %}" alt="iSustainme Icon">
+                    <h3>iSustainme</h3>
+                    <p>Prioritizing educator wellness and self-care.</p>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="{% url 'edu_website:french_konnect' %}">
+                    <img src="{% static 'images/french-konnect.png' %}" alt="French Konnect Icon">
+                    <h3>French Konnect</h3>
+                    <p>Connecting through language and cultural exchange.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mtaa Legit -->
+    <div class="section-item">
+        <h2>Mtaa Legit</h2>
+        <p>Building grassroots resilience and innovation in communities.</p>
+        <button class="toggle-btn" onclick="toggleSubsections('mtaa-subsections')">View Details</button>
+        <div class="subsections hidden" id="mtaa-subsections">
+            <div class="grid-item">
+                <a href="{% url 'edu_website:miradi' %}">
+                    <img src="{% static 'images/miradi.png' %}" alt="Miradi Icon">
+                    <h3>Miradi</h3>
+                    <p>Community-led projects for local development.</p>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="{% url 'edu_website:anga' %}">
+                    <img src="{% static 'images/anga.png' %}" alt="Anga Weather Icon">
+                    <h3>Anga</h3>
+                    <p>Real-time weather updates to mitigate risks.</p>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="{% url 'edu_website:environmental_resilience' %}">
+                    <img src="{% static 'images/environmental-resilience.png' %}" alt="Environmental Resilience Icon">
+                    <h3>Environmental Resilience</h3>
+                    <p>Innovations for sustainable community ecosystems.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Edu-Konnect Subsections -->
+<div class="grid-item">
+    <a href="{% url 'edu_website:neuroaid' %}">
+        <img src="{% static 'images/neuroaid.png' %}" alt="NeuroAid AI Icon">
+        <h3>NeuroAid AI</h3>
+        <p>AI-powered solutions for learning disabilities.</p>
+    </a>
+</div>
+<div class="grid-item">
+    <a href="{% url 'edu_website:isustainme' %}">
+        <img src="{% static 'images/isustainme.png' %}" alt="iSustainme Icon">
+        <h3>iSustainme</h3>
+        <p>Sustainability through resource upcycling and innovations.</p>
+    </a>
+</div>
+<!-- Mtaa Legit Subsections -->
+<div class="grid-item">
+    <a href="{% url 'edu_website:miradi' %}">
+        <img src="{% static 'images/miradi.png' %}" alt="Miradi Icon">
+        <h3>Miradi</h3>
+        <p>Community-led projects for local development.</p>
+    </a>
+    
+    <a href="{% url 'edu_website:anga' %}">
+        <img src="{% static 'images/anga.png' %}" alt="Anga Weather Icon">
+        <h3>Anga</h3>
+        <p>Real-time weather updates to mitigate risks.</p>
+    </a>
+    
+    <a href="{% url 'edu_website:environmental_resilience' %}">
+        <img src="{% static 'images/environmental-resilience.png' %}" alt="Environmental Resilience Icon">
+        <h3>Environmental Resilience</h3>
+        <p>Innovations for sustainable community ecosystems.</p>
+    </a>
+</div>
+
+</section>
 {% endblock %}

@@ -6,6 +6,27 @@ from .forms import ContactForm
 def home(request):
     return render(request, 'edu_website/home.html')
 
+def home(request):
+    return render(request, 'edu_website/home.html')
+
+def neuroaid(request):
+    return render(request, 'edu_website/neuroaid.html')
+
+def isustainme(request):
+    return render(request, 'edu_website/isustainme.html')
+
+def anga(request):
+    return render(request, 'edu_website/anga.html')
+
+def french_konnect(request):
+    return render(request, 'edu_website/french_konnect.html')
+
+def miradi(request):
+    return render(request, 'edu_website/miradi.html')
+
+def environmental_resilience(request):
+    return render(request, 'edu_website/environmental_resilience.html')
+
 def blog_list(request):
     posts = BlogPost.objects.all()
     return render(request, 'edu_website/blog_list.html', {'posts': posts})
